@@ -1,5 +1,7 @@
 @import "~bootstrap/less/bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Exo+2:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Exo:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i');
+
 
 // Hyphy & Datamonkey Colors
 @hyphy-green: #479167;
@@ -19,6 +21,15 @@ html, body {
 .glyphicon {
  right: 10px;
  line-height: 1.1;
+}
+
+p.description {
+ font-family: "Noto Sans", sans-serif;
+ line-height: 1.5;
+ font-size: 15px;
+ color: #545454;
+ padding: 0px 20px;
+ margin: 0px 0px 20px 0px;
 }
 
 ::selection {
@@ -69,17 +80,22 @@ small {
  width: 100%;
 }
 
+/* Temporary "fix" that removes unnecessary padding above results summary heading on Datamonkey */
+.clearance#summary-div {
+ display: none;
+}
+
 .container {
  margin-top: 30px;
 }
 
-.fa {
+h5 i.fa {
  font-weight: 600;
  color: #DD4631;
  font-size: 16px;
 }
 
-.fa:hover {
+h5 i.fa:hover {
  color: @datamonkey-turquoise;
 }
 
@@ -109,6 +125,14 @@ small {
 @btn-primary-border: @datamonkey-turquoise;
 @btn-primary-bg: @datamonkey-turquoise;
 @btn-primary-color: #fff;
+/*DM Results page, Tree Toolbar, Remove rounded borders*/
+.btn-sm, .btn-group-sm > .btn {
+ border-radius: 0px;
+}
+/*DM Results page, Tree Toolbar, Make button dimensions consistent*/
+input-group-btn > .btn {
+ padding: 5px 12px;
+}
 
 .btn-primary {
  border-radius: 30px;
@@ -299,7 +323,13 @@ label {
 
 @border-radius-base: 0px;
 @nav-link-padding: 10px 25px;
+/*DM, Results page, update scrollspy hover*/
 @nav-pills-border-radius: @border-radius-base;
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+ background-color: #484D56;
+}
 
 @navbar-default-bg: #fff;
 @navbar-height: 70px;
@@ -469,6 +499,14 @@ label {
  padding-right: 45px;
  letter-spacing: 0 !important;
 }
+
+input, button, select, textarea {
+ font-size: 119px !important;
+}
+
+
+
+
 
 
 

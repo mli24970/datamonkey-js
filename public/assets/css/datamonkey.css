@@ -675,3 +675,15 @@ a.hyphy-anchor {
 #cluster_table td:first-child {
   min-width:200px;
 }
+
+
+
+
+select, textarea, option {
+ font-family: "Montserrat", sans-serif;
+ font-size: 15px !important;
+ font-weight: 600 !important;
+ height: 34px;
+ padding: 6px;
+ width: 100%;
+}
